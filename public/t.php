@@ -1,4 +1,3 @@
-<?
+<?php
 
-echo ' inqury test';
-
+echo 'inquiry test';

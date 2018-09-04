@@ -1,4 +1,5 @@
-<?php  
+<?php  // admin_update.php
+//
 require_once('init_admin_auth.php');
 // •ÔM“à—e‚ðŽæ“¾
 $body = (string)@$_POST['response_body'];
@@ -13,7 +14,7 @@ if ('' === $token) {
     $error_flg['csrf_error'] = 1;
 }
 // token‚Ì”äŠr
-if ($_SESSION['admin_csrf'] !== $token) {
+if ($_SESSION['admin_csrf'] !== $token) { // XXX hash_equals
     $error_flg['csrf_error'] = 1;
 }
 unset($_SESSION['admin_csrf']); // ˆê‰ñŽg‚¢Ø‚è
